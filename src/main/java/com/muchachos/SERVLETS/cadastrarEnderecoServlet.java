@@ -1,4 +1,4 @@
-package com.muchachos.Servlet;
+package com.muchachos.SERVLETS;
 
 import com.muchachos.DAO.EnderecoDAO;
 import com.muchachos.MODELS.Endereco;

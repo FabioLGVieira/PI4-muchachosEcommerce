@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.muchachos.Servlet;
+package com.muchachos.SERVLETS;
 import com.muchachos.MODELS.Endereco;
 import java.io.IOException;
 import java.util.List;
