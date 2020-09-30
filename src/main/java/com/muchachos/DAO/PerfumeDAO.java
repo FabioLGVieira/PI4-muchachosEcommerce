@@ -247,7 +247,7 @@ public class PerfumeDAO {
                 float Peso = result.getFloat("PESO");
                 String Tag = result.getString("TAG");
               
-                Perfume P = new Perfume(Status, Titulo, Descricao, ValorVenda, ValorCusto, Categoria, Quantidade, Data, Imagem, Imagem1,Imagem2, Peso, Tag);
+                Perfume P = new Perfume(ID,Status, Titulo, Descricao, ValorVenda, ValorCusto, Categoria, Quantidade, Data, Imagem, Imagem1,Imagem2, Peso, Tag);
                 //Adiciona a instância na lista
                 listaProduto.add(P);
             }
@@ -318,7 +318,7 @@ public class PerfumeDAO {
                 float Peso = result.getFloat("PESO");
                 String Tag = result.getString("TAG");
               
-                Perfume P = new Perfume(Status, Titulo, Descricao, ValorVenda, ValorCusto, Categoria, Quantidade, Data, Imagem, Imagem1,Imagem2, Peso, Tag);
+                Perfume P = new Perfume(ID,Status, Titulo, Descricao, ValorVenda, ValorCusto, Categoria, Quantidade, Data, Imagem, Imagem1,Imagem2, Peso, Tag);
                 //Adiciona a instância na lista
                 listaProduto.add(P);
             }
