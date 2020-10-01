@@ -76,7 +76,7 @@ public class homeServlet extends HttpServlet {
             System.out.println(e);
         }
 
-        request.getRequestDispatcher("JSP-PAGES/home.jsp").forward(request, response);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
 
     }
 
