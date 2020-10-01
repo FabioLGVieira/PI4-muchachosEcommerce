@@ -37,7 +37,7 @@ public class consultaEnderecoServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         int ID = Integer.parseInt(request.getParameter("ID"));
 RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEndereco.jsp");
+                    = request.getRequestDispatcher("CRUD-ENDERECO/consultaEndereco.jsp");
     }
 
 }

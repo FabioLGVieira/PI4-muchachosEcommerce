@@ -66,7 +66,7 @@ public class detalhesProdutoServlet extends HttpServlet {
         sessao.setAttribute("listaTitulo", listaTitulo);
 
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("JSP-PAGES/detalhesProduto.jsp");
+                = request.getRequestDispatcher("detalhesProduto.jsp");
         dispatcher.forward(request, response);
     }
 

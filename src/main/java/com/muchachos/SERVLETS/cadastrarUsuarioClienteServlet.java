@@ -53,7 +53,7 @@ public class cadastrarUsuarioClienteServlet extends HttpServlet {
             e.getLocalizedMessage();
             System.out.println(e);
         }
-        request.getRequestDispatcher("JSP-PAGES/home.jsp").forward(request, response);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
     }
 
 }

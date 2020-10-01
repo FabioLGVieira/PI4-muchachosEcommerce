@@ -18,7 +18,7 @@ public class ConnectionDB {
         Class.forName("com.mysql.jdbc.Driver");
         // Passo 2: Obter a conexao
         conn = DriverManager.getConnection(
-                "jdbc:mysql://127.0.0.1:3306/ECOMMERCE_PERFUMARIA",
+                "jdbc:mysql://127.0.0.1:3380/ECOMMERCE_Project?useTimezone=true&serverTimezone=UTC&useSSL=false",
                 "root",
                 "");
         return conn;

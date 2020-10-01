@@ -122,8 +122,8 @@
                         <li id="produtos" class="nav-item dropdown" style="display:none">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Produtos</a>
                             <div class="dropdown-menu">
-                                <a href="${pageContext.request.contextPath}/JSP-PAGES/CRUD-PRODUTOS/cadastrarProdutos.jsp" class="dropdown-item">Cadastro</a>
-                                <a href="${pageContext.request.contextPath}/JSP-PAGES/CRUD-PRODUTOS/consultaProdutos.jsp" class="dropdown-item">Consulta</a>
+                                <a href="${pageContext.request.contextPath}/CRUD-PRODUTOS/cadastrarProdutos.jsp" class="dropdown-item">Cadastro</a>
+                                <a href="${pageContext.request.contextPath}/CRUD-PRODUTOS/consultaProdutos.jsp" class="dropdown-item">Consulta</a>
                             </div>
                         </li>
                         <li id="clientes" class="nav-item dropdown" style="display:none">
@@ -136,15 +136,15 @@
                         <li id="usuarios" class="nav-item dropdown" style="display:none">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usuarios</a>
                             <div class="dropdown-menu">
-                                <a href="${pageContext.request.contextPath}/JSP-PAGES/CRUD-USUARIO/cadastrarUsuario.jsp" class="dropdown-item">Cadastro</a>
-                                <a href="${pageContext.request.contextPath}/JSP-PAGES/CRUD-USUARIO/consultaUsuario.jsp" class="dropdown-item">Consulta</a>
+                                <a href="${pageContext.request.contextPath}/CRUD-USUARIO/cadastrarUsuario.jsp" class="dropdown-item">Cadastro</a>
+                                <a href="${pageContext.request.contextPath}/CRUD-USUARIO/consultaUsuario.jsp" class="dropdown-item">Consulta</a>
                             </div>
                         </li>
 
                         <li id="pedidos" class="nav-item dropdown" style="display:none">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pedidos</a>
                             <div class="dropdown-menu">
-                                <a href="${pageContext.request.contextPath}/JSP-PAGES/consultaPedidos.jsp" class="dropdown-item">Consulta</a>
+                                <a href="${pageContext.request.contextPath}/consultaPedidos.jsp" class="dropdown-item">Consulta</a>
                             </div>
                         </li>
                     </ul>

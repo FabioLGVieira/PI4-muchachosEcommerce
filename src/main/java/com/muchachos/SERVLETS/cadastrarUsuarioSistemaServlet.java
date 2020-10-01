@@ -54,7 +54,7 @@ public class cadastrarUsuarioSistemaServlet extends HttpServlet {
             e.getLocalizedMessage();
             System.out.println(e);
         }
-        request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/cadastrarUsuario.jsp").forward(request, response);
+        request.getRequestDispatcher("CRUD-USUARIO/cadastrarUsuario.jsp").forward(request, response);
     }
     
 }

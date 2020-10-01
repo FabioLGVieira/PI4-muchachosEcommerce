@@ -41,7 +41,7 @@ public class consultaProdutoServlet extends HttpServlet {
         }
         
 
-        request.getRequestDispatcher("JSP-PAGES/CRUD-PRODUTOS/consultaProdutos.jsp").forward(request, response);
+        request.getRequestDispatcher("CRUD-PRODUTOS/consultaProdutos.jsp").forward(request, response);
 
     }
 

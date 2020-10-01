@@ -47,7 +47,7 @@ public class deletarProdutoServlet extends HttpServlet {
         }
 
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("JSP-PAGES/CRUD-PRODUTOS/consultaProdutos.jsp");
+                = request.getRequestDispatcher("CRUD-PRODUTOS/consultaProdutos.jsp");
         dispatcher.forward(request, response);
 
     }

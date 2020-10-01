@@ -46,7 +46,7 @@ public class deletarUsuarioServlet extends HttpServlet {
             System.out.println("erro DAO produto: " + e);
         }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/consultaUsuario.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("CRUD-USUARIO/consultaUsuario.jsp");
         dispatcher.forward(request, response);
 
     }

@@ -30,7 +30,7 @@ public class cadastrarEnderecoServlet extends HttpServlet {
         request.setAttribute("IDEndereco", ID);
 
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/cadastrarEndereco.jsp");
+                = request.getRequestDispatcher("CRUD-ENDERECO/cadastrarEndereco.jsp");
         dispatcher.forward(request, response);
     
 }
@@ -65,7 +65,7 @@ public class cadastrarEnderecoServlet extends HttpServlet {
             
 
                 RequestDispatcher dispatcher
-                        = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEnderecoCliente.jsp");
+                        = request.getRequestDispatcher("CRUD-ENDERECO/consultaEnderecoCliente.jsp");
                 dispatcher.forward(request, response);
         } else {
             request.getRequestDispatcher("homeServlet").forward(request, response);

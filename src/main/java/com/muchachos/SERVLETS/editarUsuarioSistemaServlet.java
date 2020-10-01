@@ -41,7 +41,7 @@ public class editarUsuarioSistemaServlet extends HttpServlet {
         request.setAttribute("ID", ID);
         request.setAttribute("usuario", U);
         /* RETORNA PRA PÁGINA DE EDITAR PRODUTOS */
-        RequestDispatcher dispatcher = request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/editarUsuarios.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("CRUD-USUARIO/editarUsuarios.jsp");
         dispatcher.forward(request, response);
 
     }
@@ -90,7 +90,7 @@ public class editarUsuarioSistemaServlet extends HttpServlet {
             e.getLocalizedMessage();
             System.out.println(e);
         }
-        request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/consultaUsuario.jsp").forward(request, response);
+        request.getRequestDispatcher("CRUD-USUARIO/consultaUsuario.jsp").forward(request, response);
 
     }
 
