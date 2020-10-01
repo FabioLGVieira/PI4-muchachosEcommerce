@@ -78,14 +78,7 @@
                                 <%-- FIM --%>
                                 <c:forEach items ="${listaProduto}" var="produto">
                                     <tr>
-                                        <td>
-                                            <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">
-                                                <div>
-                                                    <input style="max-height: 80px;" type="image" src="${produto.getImagem()}" value="submit">
-                                                    <input name="ID" type="hidden" value="${produto.getID()}"/>
-                                                </div>
-                                            </form>
-                                        </td>
+                                        
                                         <td style="max-width:250px;"><c:out value="${produto.getTitulo()}"/></td>
                                         <td><c:out value="${produto.getStatus()}"/></td>
                                         <td><c:out value="${produto.getDescricao()}"/></td>
@@ -95,6 +88,14 @@
                                         <td><c:out value="${produto.getQuantidade()}"/></td>
                                         <td><c:out value="${produto.getPeso()}"/></td>
                                         <td><c:out value="${produto.getTag()}"/></td>
+                                        <td>
+                                            <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">
+                                                <div>
+                                                    <input style="max-height: 80px;" type="image" src="${produto.getImagem()}" value="submit">
+                                                    <input name="ID" type="hidden" value="${produto.getID()}"/>
+                                                </div>
+                                            </form>
+                                        </td>
                                         <!-- TD DE EDIÇÃO DE PRODUTO -->
                                         <td>
                                             <form method="get" action="${pageContext.request.contextPath}/editarProdutoServlet">

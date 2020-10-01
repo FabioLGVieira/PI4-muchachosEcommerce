@@ -22,7 +22,7 @@
             max-height: 650px;
             max-width: 1280px;
             width:100%;
-            font-family: HomepageBaukasten-Book;
+            font-family: Oxygen;
         }
     </style>
 
@@ -55,7 +55,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h2><c:out value="${detalhePerfume.getTitulo()}"/></h2>
-                                    <p>Data: <span><c:out value="${detalhePerfume.getTitulo()}"/></span> | 
+                                    <p>Data: <span><c:out value="${detalhePerfume.getData()}"/></span> | 
                                         <span>Categoria: <c:out value="${detalhePerfume.getCategoria()}"/> </span><p>
                                 </div>
                             </div>
