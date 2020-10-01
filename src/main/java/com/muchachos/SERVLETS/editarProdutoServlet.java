@@ -57,7 +57,7 @@ public class editarProdutoServlet extends HttpServlet {
         float ValorCusto = Float.parseFloat(request.getParameter("ValorCusto").replaceAll("\\,", "\\."));
         String Categoria = request.getParameter("Categoria");
         int Quantidade = Integer.parseInt(request.getParameter("Quantidade"));
-        String Data = request.getParameter("DataCadastro");
+        String Data = request.getParameter("Data");
          String Imagem = request.getParameter("imagemB64");
         String Imagem1 = request.getParameter("imagemB641");
         String Imagem2 = request.getParameter("imagemB642");
