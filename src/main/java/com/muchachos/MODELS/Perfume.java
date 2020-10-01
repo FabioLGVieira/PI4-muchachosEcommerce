@@ -207,5 +207,9 @@ public class Perfume implements Serializable {
         this.tag = tag;
     }
 
-    
+    public String formatarValor(float valor) {
+        Locale ptBr = new Locale("pt", "BR");
+        String valorString = NumberFormat.getCurrencyInstance(ptBr).format(valor);
+        return valorString;
+    }
 }

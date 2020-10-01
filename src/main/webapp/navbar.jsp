@@ -168,7 +168,7 @@
                     <div class="form-singin">
                         <div class="" id="" >
                             <form  action = "${pageContext.request.contextPath}/loginServlet" method = "post" style="text-align: center;">
-                                <i class="fa fa-journal-whills"></i>
+                                
                                 <h1 class="h3 mb-3 font-weight-normal">Insira seus dados</h1>
                                 <label for="inputUsuario" class="sr-only">Usuário</label>
                                 <input type="usuario" id="inputUsuario" class="form-control" placeholder="Usuário" required="" autofocus="" name="inputName">
