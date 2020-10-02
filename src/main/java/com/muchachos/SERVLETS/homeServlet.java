@@ -43,8 +43,8 @@ public class homeServlet extends HttpServlet {
             sessao.setAttribute("listaMenorPreco", listaMenorPreco);
 
             if (sessao.getAttribute("loginText") == null) {
-                request.setAttribute("loginText", "Login/Inscrever-se");
-                sessao.setAttribute("loginText", "Login/Inscrever-se");
+                request.setAttribute("loginText", "Inscrever-se/Login");
+                sessao.setAttribute("loginText", "Inscrever-se/Login");
             } 
         
             if (sessao.getAttribute("tipo") == null) {

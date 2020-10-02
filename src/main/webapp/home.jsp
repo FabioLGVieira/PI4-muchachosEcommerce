@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/style.css"/>
+        <link rel="stylesheet"  type="text/css" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/style.css"/>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/swiper.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -20,7 +20,7 @@
 
     <body >
         <!-- INICIO DO BODY -->
-        <div class="heading-bar" style="background-color:  #0E9092 !important;"></div>
+        <div class="heading-bar"></div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -49,7 +49,7 @@
         </div>
           <div class="heading-bar"></div>         
         <div class="heading">
-            <h4 >Mais Populares</h4>
+            <h4><strong> Mais Populares</strong> </h4>
         </div>
         <div class="swiper-container" >
             <div class="swiper-wrapper">
@@ -57,7 +57,7 @@
                 <c:forEach items ="${listaMaisVendidos}" var="produto">
                     <div class="swiper-slide">
                         <div class="slider-box">
-                            <p class="time"><c:out value="${produto.getTag()}"/></p>
+                            <p class="time"><mark><c:out value="${produto.getTag()}"/></mark></p>
 
                             <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">
                                 <div class="img-box">
@@ -88,7 +88,7 @@
 
 
         <div class="heading">
-            <h4>Lançamentos</h4>
+            <h4><strong>Lançamentos</strong></h4>
         </div>
         <!-- SLIDER 2 -->
         <div class="swiper-container">
@@ -96,7 +96,7 @@
                 <c:forEach items ="${listaNovos}" var="produto1">
                     <div class="swiper-slide">
                         <div class="slider-box">
-                            <p class="time"><c:out value="${produto1.getTag()}"/></p>
+                            <p class="time"><mark><c:out value="${produto1.getTag()}"/></mark></p>
 
                             <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">
                                 <div class="img-box">
@@ -127,7 +127,7 @@
 
 
         <div class="heading">
-            <h4>Mais Baratos</h4>
+            <h4><strong>Mais Baratos</strong></h4>
         </div>
         <!-- SLIDER 3 -->
         <div class="swiper-container">
@@ -135,7 +135,7 @@
                 <c:forEach items ="${listaMenorPreco}" var="produto2">
                     <div class="swiper-slide">
                         <div class="slider-box">
-                            <p class="time"><c:out value="${produto2.getTag()}"/></p>
+                            <p class="time"><mark><c:out value="${produto2.getTag()}"/></mark></p>
 
 
                             <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">

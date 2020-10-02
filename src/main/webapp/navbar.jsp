@@ -26,10 +26,10 @@
             #top-bar {
                 width: 100%;
                 margin: 0 auto;
-                background-color:  #0E9092 !important;
+                background-color:  #F28F61 !important;
                 height: 40px;
                 font-family: sans-serif;
-                color: #FD7F66;
+                color: #70422D;
                 text-align: right;
                 border: 1px solid rgba(187,187,187,0.40);
             }
@@ -42,7 +42,7 @@
 
             #signin-div a{
                 margin-left:20px;
-                color:#FD7F66;
+                color:#70422D;
             }
 
             #signin-div a:hover{
@@ -98,7 +98,7 @@
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="${pageContext.request.contextPath}/homeServlet">
-                    <img src="${pageContext.request.contextPath}/JSP-STYLES/IMAGES/LANDING-PAGE/logo-colorido.png">
+                    <img style="height: 100px;width: 100px;"  src="${pageContext.request.contextPath}/JSP-STYLES/IMAGES/LANDING-PAGE/logo-colorido.png">
                     Muchachos Perfumaria</a>
                 <button class="navbar-toggler"
                         data-toggle="collapse"
@@ -151,7 +151,7 @@
 
                     <form class="form-inline ml-auto">
                         <input type="text" class="form-control mr-2" placeholder="Busca">
-                        <button class="btn btn-outline-success">Busca</button>
+                            <button class="btn-busca success">Buscar</button>
                     </form>
                 </div>
             </div>

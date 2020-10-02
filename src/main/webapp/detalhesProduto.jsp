@@ -70,7 +70,7 @@
                                     <form method="post" action="${pageContext.request.contextPath}/adicionarNoCarrinhoServlet">
                                         <input type="number" name="quantidade" value="1" style="display:none;">
                                         <input type="hidden" value="${detalhePerfume.getID()}" name="ID">
-                                        <input type="submit" class="btn btn-block btn-lg btn-primary" style="border-radius:0px;width:100%;" value="Adicionar ao Carrinho">
+                                        <input type="submit" class="btn btn-block btn-lg btn-primary" style="border-radius:100px;width:100%;background-color: #00A392;" value="Adicionar ao Carrinho">
                                     </form>
                                 </div>
                             </div>

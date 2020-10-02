@@ -58,7 +58,7 @@
                 <div class="row justify-content-center">
                     <div class="form-group col-12">
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" id="style-1" style="height:500px;">
-                            <table class="table" style="color: white;">
+                            <table class="table" style="color: black;">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nome Produto</th>
@@ -79,15 +79,15 @@
                                 <c:forEach items ="${listaProduto}" var="produto">
                                     <tr>
                                         
-                                        <td style="max-width:250px;"><c:out value="${produto.getTitulo()}"/></td>
-                                        <td><c:out value="${produto.getStatus()}"/></td>
-                                        <td><c:out value="${produto.getDescricao()}"/></td>
-                                        <td><c:out value="${produto.getData()}"/></td>
-                                        <td><c:out value="${produto.formatarValor(produto.getValorVenda())}"/></td>
-                                        <td><c:out value="${produto.getCategoria()}"/></td>
-                                        <td><c:out value="${produto.getQuantidade()}"/></td>
-                                        <td><c:out value="${produto.getPeso()}"/></td>
-                                        <td><c:out value="${produto.getTag()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getTitulo()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getStatus()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getDescricao()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getData()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.formatarValor(produto.getValorVenda())}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getCategoria()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getQuantidade()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getPeso()}"/></td>
+                                        <td style="vertical-align: middle;"><c:out value="${produto.getTag()}"/></td>
                                         <td>
                                             <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">
                                                 <div>
@@ -97,7 +97,7 @@
                                             </form>
                                         </td>
                                         <!-- TD DE EDIÇÃO DE PRODUTO -->
-                                        <td>
+                                        <td style="vertical-align: middle;">
                                             <form method="get" action="${pageContext.request.contextPath}/editarProdutoServlet">
                                                 <input type="hidden" value="${produto.getID()}" name="ID">
 
@@ -107,7 +107,7 @@
                                         </td>
 
                                         <!-- TD DE EXCLUSÃO DE PRODUTO -->
-                                        <td>
+                                        <td style="vertical-align: middle;">
                                             <form  method="post" action="${pageContext.request.contextPath}/deletarProdutoServlet">
                                                 <input type="hidden" value="${produto.getID()}" name="ID">
                                                 <!-- Button trigger modal -->

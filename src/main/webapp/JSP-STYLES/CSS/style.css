@@ -1,7 +1,7 @@
 /* FONTE DO SITE */
 @font-face {
-    font-family: Oxygen;
-    src: url('../FONTES/Oxygen.otf');
+    font-family: Agane;
+    src: url('../FONTES/Agane-light.ttf');
 }
 
 
@@ -9,7 +9,7 @@
 body {
     margin-top: 200px;
     padding:0px;
-    font-family:Oxygen, sans-serif;
+    font-family:Agane, sans-serif;
     background-color: #F4F4F4 !important;
 }
 .swiper-slide{
@@ -45,7 +45,7 @@ body {
 .time{
     position:absolute;
     top:0px;
-    right:20px;
+    text-align: ceter;
     color:#f16007;
 }
 .detail {
@@ -57,7 +57,7 @@ body {
     line-height:20px;
 }
 .price {
-    color:#06A2AF;
+    color:#A33908;
     font-size: 30px;
     border-radius: 2px;
     line-height: 30px;
@@ -69,10 +69,11 @@ body {
 
 .cart{
     position:absolute;
-    bottom: 0px;
+    bottom: 10px;
     height:45px;
-    background-color:#FF696E;
-    width:100%;
+    border-radius: 100px; 
+    background-color:#00A392;
+    width:90%;
     display:flex;
     justify-content:center;
     align-items: center;
@@ -119,13 +120,13 @@ body {
     padding:0px 0px;
     text-align: left;
     color: #050D1A;
-    font-family: HomepageBaukasten-Book;
+    font-family: Agane;
 
 }
 .heading-bar {
     margin: 0px auto;
-    height: 60px;
-    background-color:  #0E9092 !important;
+    height: 10px;
+    background-color:  #F05E18 !important;
     border: 1px solid rgba(187,187,187,0.40);
 }
 
@@ -141,21 +142,21 @@ body {
 footer {
     height: 360px;
     padding: 15px;
-    background-color:#0E9092;
+    background-color:#F28F61;
 }
 
 .footerBox{
     height: 200px;
     width: 400px;
-    color: #FD7F66;
+    color: #F05E18;
     float:right;
 
 }
 
 .footer-bar {
     margin: 0px auto;
-    height: 60px;
-    background-color: #F8F8F8 !important;
+    height: 10px;
+    background-color: #F05E18 !important;
     border: 1px solid rgba(187,187,187,0.40);
     margin-top: 100px;
 }
@@ -222,25 +223,25 @@ footer hr{
     max-width: 1000px;
     padding: 15px;
     margin: auto;
-    color: white;
-    background-color: rgba(18, 27, 42, 0.8);
+    color: black;
+    background-color: #ffffff;
     padding: 1%;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgba(132, 132, 132, 0.5); 
-    font-family: HomepageBaukasten-Book;
+    font-family: Agane;
 }
 
 #btn-form{
     padding: .5rem 1rem;
     font-size: 1rem;
     line-height: 1.80;
-    border-radius: .3rem;
-    background-color: #C0B283;
+    border-radius: 100px;
+    background-color: #00A392;
     border: 0;
     color: white;
 }
 #btn-form:hover{
-    background-color: white;
+    background-color:  #F28F61;
     color: black;
     border: 5px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -256,7 +257,7 @@ footer hr{
     color: white;
 }
 #btn-form-search:hover{
-    background-color: white;
+    background-color: #F28F61;
     color: black;
     border: 5px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -275,6 +276,27 @@ footer hr{
     color: black;
     border: 5px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-busca {
+    line-height: 2;
+    width: 60px;
+    border-radius: 5px;
+  border: 2px solid #00A392;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.success {
+  border-color: #00A392;
+  color: green;
+}
+
+.success:hover {
+  background-color: #00A392;
+  color: white;
 }
 
 /*TABLE DISPLAY LISTA DE PRODUTOS CLIENTES*/
