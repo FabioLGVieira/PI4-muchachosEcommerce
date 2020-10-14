@@ -98,7 +98,7 @@
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand" href="${pageContext.request.contextPath}/homeServlet">
-                    <img style="height: 100px;width: 100px;"  src="${pageContext.request.contextPath}/JSP-STYLES/IMAGES/LANDING-PAGE/logo-colorido.png">
+                    <img style="height: 50px; width: 50px;"  src="${pageContext.request.contextPath}/JSP-STYLES/IMAGES/LANDING-PAGE/logo-colorido.png">
                     Muchachos Perfumaria</a>
                 <button class="navbar-toggler"
                         data-toggle="collapse"
