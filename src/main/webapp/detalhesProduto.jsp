@@ -32,7 +32,7 @@
         <div class="heading-bar"></div>
 
         <!-- INICIO DO BODY -->
-        <div id="body-details" class="text-center container">
+    
             <!-- INICIO FORM -->
 
                 <div class="form-type col" id="FadeForm" style="margin: 1%; background-color:white; width:100%;">
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <!-- FIM DIV COMPRA -->
-                    </div> 
+                    </div>
                 </div>
                 <!-- FIM AREA DE COMPRA -->
                 <!-- INICIO DO SWIPER DE PRODUTOS DO MESMO TITULO -->
@@ -119,7 +119,7 @@
                 <!-- FIM DO SWIPER DE PRODUTOS DO MESMO AUTOR -->
                 <!-- DETALHES -->
                 <div id="FadeForm" class="form-type container" style="margin-left:10px; background-color:white;
-                     height:auto; max-width: 1300px; width:100%; padding:2%">
+                     height:auto; max-width: 2300px; width:100%; padding:2%">
                     <div class="row justify-content-start" style="text-align:left; color: black;">
                         <div class="col-md-12">
                             <h3>Descrição</h3><br/>
@@ -153,7 +153,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- FIM DETALES -->
           
             <!--FOOTER -->
@@ -173,7 +172,6 @@
                     </p>
                 </div>
             </footer>
-        </div>
         <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/swiper.min.js"></script>
         <script src="${pageContext.request.contextPath}/JSP-STYLES/JS/script.js"></script>
     </body>
