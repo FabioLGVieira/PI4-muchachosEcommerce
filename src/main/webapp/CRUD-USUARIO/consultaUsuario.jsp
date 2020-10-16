@@ -13,9 +13,9 @@
         <link rel="icon" href="${pageContext.request.contextPath}/JSP-STYLES/IMAGES/LANDING-PAGE/logo-colorido.png" type="image/ico" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Consulta de Usuários</title>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/style.css"/>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/swiper.min.css"/>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/jquery-ui.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/style.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/JSP-STYLES/CSS/swiper.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <style type="text/css">
 
@@ -26,9 +26,7 @@
     <body onload="mensagemCadastro()">
 
         <div class="heading-bar"></div>
-		
         <div class="clear"></div>
-		
         <!-- INICIO DO BODY -->
         <div id="" class="text-center" style="margin-top: 20px;">
             <form id="FadeForm" class="form-type" 
@@ -193,9 +191,11 @@
         <!-- FIM DO BODY -->
         <div class="footer-bar"></div>
 
-		<script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/swiper.min.js"></script>
-		<script src="${pageContext.request.contextPath}/JSP-STYLES/JS/script.js"></script>
-		<script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/jquery-3.4.1.min.js"></script>
+        <!--FOOTER -->   
+        
+        <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/swiper.min.js"></script>
+        <script src="${pageContext.request.contextPath}/JSP-STYLES/JS/script.js"></script>   
+        <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/jquery-3.4.1.min.js"></script>
         <script type="text/javascript">
 
         </script>
