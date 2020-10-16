@@ -7,6 +7,7 @@ package com.muchachos.MODELS;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -29,6 +30,15 @@ public class Perfume implements Serializable {
     private String imagem2;
     private float peso;
     private String tag;
+    private List<Perguntas> perguntas;
+
+    public List<Perguntas> getPerguntas() {
+        return perguntas;
+    }
+
+    public void setPerguntas(List<Perguntas> perguntas) {
+        this.perguntas = perguntas;
+    }
 
     public Perfume() {
     }
@@ -62,6 +72,24 @@ public class Perfume implements Serializable {
         this.tag = tag;
     }
 
+    public Perfume(Integer ID, String status, String titulo, String descricao, float valorVenda, float valorCusto, String categoria, Integer quantidade, String data, String imagem, String imagem1, String imagem2, float peso, String tag, List<Perguntas> perguntas) {
+        this.ID = ID;
+        this.status = status;
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.valorVenda = valorVenda;
+        this.valorCusto = valorCusto;
+        this.categoria = categoria;
+        this.quantidade = quantidade;
+        this.data = data;
+        this.imagem = imagem;
+        this.imagem1 = imagem1;
+        this.imagem2 = imagem2;
+        this.peso = peso;
+        this.tag = tag;
+        this.perguntas = perguntas;
+    }
+
     public Perfume(Integer ID, String status, String titulo, String descricao, float valorVenda, float valorCusto, String categoria, Integer quantidade, String data, String imagem, String imagem1, String imagem2, float peso, String tag) {
         this.ID = ID;
         this.status = status;
@@ -79,7 +107,7 @@ public class Perfume implements Serializable {
         this.tag = tag;
     }
 
-    public Perfume(String status, String titulo, String descricao, float valorVenda, float valorCusto, String categoria, Integer quantidade, String data, String imagem, String imagem1, String imagem2, float peso, String tag) {
+    public Perfume(String status, String titulo, String descricao, float valorVenda, float valorCusto, String categoria, Integer quantidade, String data, String imagem, String imagem1, String imagem2, float peso, String tag/*, List<Perguntas> perguntas*/) {
         this.status = status;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -93,6 +121,7 @@ public class Perfume implements Serializable {
         this.imagem2 = imagem2;
         this.peso = peso;
         this.tag = tag;
+        //this.perguntas = perguntas;
     }
 
     public Integer getID() {

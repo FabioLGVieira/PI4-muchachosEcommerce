@@ -32,146 +32,158 @@
         <div class="heading-bar"></div>
 
         <!-- INICIO DO BODY -->
-    
-            <!-- INICIO FORM -->
 
-                <div class="form-type col" id="FadeForm" style="margin: 1%; background-color:white; width:100%;">
+        <!-- INICIO FORM -->
 
-                    <div class="row align-items-center" style="padding:3%;">
+        <div class="form-type col" id="FadeForm" style="margin: 1%; background-color:white; width:100%;">
 
-                        <!-- DIV IMAGEM -->
-                        <div class="form-group col" style="" >
-                            <img alt="Imagem" src="${detalhePerfume.getImagem()}" id="target" style="max-width:450px;
-                                 max-height: 450px;">
-                            <img alt="Imagem" src="" id="target1" style="max-width:300px; max-height: 300px;display:none;">
-                            <img alt="Imagem" src="" id="target2" style="max-width:300px; max-height: 300px;display:none;">
-                            <input type="hidden" id="base64" name="imagemB64">
-                            <input type="hidden" id="base641" name="imagemB641">
-                            <input type="hidden" id="base642" name="imagemB642">
-                        </div>
-                        <!-- FIM DIV IMAGEM -->
-                        <!-- DIV COMPRA -->
-                        <div id="div-box-compra" class="form-group col align-items-center" >
-                            <div class="row">
-                                <div class="col">
-                                    <h2><c:out value="${detalhePerfume.getTitulo()}"/></h2>
-                                    <p>Data: <span><c:out value="${detalhePerfume.getData()}"/></span> | 
-                                        <span>Categoria: <c:out value="${detalhePerfume.getCategoria()}"/> </span><p>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row justify-content-around align-items-center">
-                                <div class="col-4">
-                                    <p style="font-size:30px;"><c:out value="${detalhePerfume.formatarValor(detalhePerfume.getValorVenda())}"/><p>
-                                    <p style="font-size:14px;">Em até <strong>2x sem Juros</strong> no Cartão</p>
-                                </div>
-                                <div class="col-6" >
-                                   <!-- CORREÇÃO DE BUG -->
-                                    <form method="post" action="${pageContext.request.contextPath}/adicionarNoCarrinhoServlet">
-                                        <input type="number" name="quantidade" value="1" style="display:none;">
-                                        <input type="hidden" value="${detalhePerfume.getID()}" name="ID">
-                                        <input type="submit" class="btn btn-block btn-lg btn-primary" style="border-radius:100px;width:100%;background-color: #00A392;" value="Adicionar ao Carrinho">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIM DIV COMPRA -->
-                    </div>
+            <div class="row align-items-center" style="padding:3%;">
+
+                <!-- DIV IMAGEM -->
+                <div class="form-group col" style="" >
+                    <img alt="Imagem" src="${detalhePerfume.getImagem()}" id="target" style="max-width:450px;
+                         max-height: 450px;">
+                    <img alt="Imagem" src="" id="target1" style="max-width:300px; max-height: 300px;display:none;">
+                    <img alt="Imagem" src="" id="target2" style="max-width:300px; max-height: 300px;display:none;">
+                    <input type="hidden" id="base64" name="imagemB64">
+                    <input type="hidden" id="base641" name="imagemB641">
+                    <input type="hidden" id="base642" name="imagemB642">
                 </div>
-                <!-- FIM AREA DE COMPRA -->
-                <!-- INICIO DO SWIPER DE PRODUTOS DO MESMO TITULO -->
-                <div class="heading" style="width: 250px;">
-                    <h4><c:out value="${textoHeader}"/></h4>
-                </div>
-                <div class="swiper-container" >
-                    <div class="swiper-wrapper">
-                        <!-- FORM PARA CONSERTO DE BUG NA PÁGINA -->
-                       
-                        <!-- FIM DE FORM PARA CONSERTO DE BUG NA PÁGINA -->
-                        <c:forEach items ="${listaTitulo}" var="produto">
-                            <div class="swiper-slide">
-                                <div class="slider-box">
-                                    <p class="time"><c:out value="${produto.getTag()}"/></p>
-
-
-                                    <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">
-                                        <div class="img-box">
-                                            <input style="max-height: 170px;" type="image" src="${produto.getImagem()}" value="submit">
-                                            <input name="ID" type="hidden" value="${produto.getID()}"/>
-                                            <input name="autor" type="hidden" value="${produto.getTitulo()}"/>
-                                        </div>
-                                    </form>
-
-
-                                    <p class="detail" id="productTitle"><c:out value="${produto.getTitulo()}"/>
-                                        <span id="categoria" class="detail"><c:out value="${produto.getCategoria()}"/></span>
-                                        <a href="#" class="price"><span id="valorUnitario" onload=""><c:out value="${produto.formatarValor(produto.getValorVenda())}"/></span></a>
-                                    </p>
-                                    <div class="cart">
-                                        <a href="#">COMPRAR</a>  
-                                    </div>
-                                </div>
-                            </div>
-                        </c:forEach>
-
-                    </div>
-                </div>
-                <!-- FIM DO SWIPER DE PRODUTOS DO MESMO AUTOR -->
-                <!-- DETALHES -->
-                <div id="FadeForm" class="form-type container" style="margin-left:10px; background-color:white;
-                     height:auto; max-width: 2300px; width:100%; padding:2%">
-                    <div class="row justify-content-start" style="text-align:left; color: black;">
-                        <div class="col-md-12">
-                            <h3>Descrição</h3><br/>
-                            <p><c:out value="${detalhePerfume.getDescricao()}"/></p>
+                <!-- FIM DIV IMAGEM -->
+                <!-- DIV COMPRA -->
+                <div id="div-box-compra" class="form-group col align-items-center" >
+                    <div class="row">
+                        <div class="col">
+                            <h2><c:out value="${detalhePerfume.getTitulo()}"/></h2>
+                            <p>Data: <span><c:out value="${detalhePerfume.getData()}"/></span> | 
+                                <span>Categoria: <c:out value="${detalhePerfume.getCategoria()}"/> </span><p>
                         </div>
                     </div>
                     <hr>
-                    <div class="row justify-content-start" style="text-align:left; color: black;">
-                        <div class="col-md-12">
-                            <h3>Caracteristicas</h3><br/>
-                            <table class="table table-striped">
-                                <tbody>
-                                    <tr>
-                                        <td>Titulo</td>
-                                        <td><c:out value="${detalhePerfume.getTitulo()}"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ano</td>
-                                        <td><c:out value="${detalhePerfume.getData()}"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Peso</td>
-                                        <td><c:out value="${detalhePerfume.getPeso()}"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Categoria</td>
-                                        <td><c:out value="${detalhePerfume.getCategoria()}"/></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="row justify-content-around align-items-center">
+                        <div class="col-4">
+                            <p style="font-size:30px;"><c:out value="${detalhePerfume.formatarValor(detalhePerfume.getValorVenda())}"/><p>
+                            <p style="font-size:14px;">Em até <strong>2x sem Juros</strong> no Cartão</p>
+                        </div>
+                        <div class="col-6" >
+                            <!-- CORREÇÃO DE BUG -->
+                            <form method="post" action="${pageContext.request.contextPath}/adicionarNoCarrinhoServlet">
+                                <input type="number" name="quantidade" value="1" style="display:none;">
+                                <input type="hidden" value="${detalhePerfume.getID()}" name="ID">
+                                <input type="submit" class="btn btn-block btn-lg btn-primary" style="border-radius:100px;width:100%;background-color: #00A392;" value="Adicionar ao Carrinho">
+                            </form>
                         </div>
                     </div>
                 </div>
-                <!-- FIM DETALES -->
-          
-            <!--FOOTER -->
-            <div class="footer-bar"></div>
-            <footer>
-            
-                <hr>
+                <!-- FIM DIV COMPRA -->
+            </div>
+        </div>
+        <!-- FIM AREA DE COMPRA -->
+        <!-- INICIO DO SWIPER DE PRODUTOS DO MESMO TITULO -->
+        <div class="heading" style="width: 250px;">
+            <h4><c:out value="${textoHeader}"/></h4>
+        </div>
+        <div class="swiper-container" >
+            <div class="swiper-wrapper">
+                <!-- FORM PARA CONSERTO DE BUG NA PÁGINA -->
 
-                <div id="copyrightBox">
-                    <p id="copyright">
-                        As ofertas são válidas por tempo determinado e/ou enquanto durarem os estoques. Nosso serviço de entregas não permite encomendas feitas com endereçamento de Caixa Postal.</p>
-                    <p id="copyright"> 
-                        Os preços apresentados no site não são obrigatoriamente iguais aos apresentados na rede de lojas físicas da Muchachos Perfumaria, e somente são válidos para as compras efetuadas no ato de sua exibição.
-                    </p>
-                    <p id="copyright"> 
-                        Muchachos Perfumaria é uma empresa do grupo Muchachos S.A., CNPJ nº 54.345.056/0054-07, Av Faria Lima, nº 15461, São Paulo – SP.
-                    </p>
+                <!-- FIM DE FORM PARA CONSERTO DE BUG NA PÁGINA -->
+                <c:forEach items ="${listaTitulo}" var="produto">
+                    <div class="swiper-slide">
+                        <div class="slider-box">
+                            <p class="time"><c:out value="${produto.getTag()}"/></p>
+
+
+                            <form method="post" action="${pageContext.request.contextPath}/detalhesProdutoServlet">
+                                <div class="img-box">
+                                    <input style="max-height: 170px;" type="image" src="${produto.getImagem()}" value="submit">
+                                    <input name="ID" type="hidden" value="${produto.getID()}"/>
+                                    <input name="autor" type="hidden" value="${produto.getTitulo()}"/>
+                                </div>
+                            </form>
+
+
+                            <p class="detail" id="productTitle"><c:out value="${produto.getTitulo()}"/>
+                                <span id="categoria" class="detail"><c:out value="${produto.getCategoria()}"/></span>
+                                <a href="#" class="price"><span id="valorUnitario" onload=""><c:out value="${produto.formatarValor(produto.getValorVenda())}"/></span></a>
+                            </p>
+                            <div class="cart">
+                                <a href="#">COMPRAR</a>  
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
+
+            </div>
+        </div>
+        <!-- FIM DO SWIPER DE PRODUTOS DO MESMO AUTOR -->
+        <!-- DETALHES -->
+        <div id="FadeForm" class="form-type container" style="margin-left:10px; background-color:white;
+             height:auto; max-width: 2300px; width:100%; padding:2%">
+            <div class="row justify-content-start" style="text-align:left; color: black;">
+                <div class="col-md-12">
+                    <h3>Descrição</h3><br/>
+                    <p><c:out value="${detalhePerfume.getDescricao()}"/></p>
                 </div>
-            </footer>
+            </div>
+            <hr>
+            <div class="row justify-content-start" style="text-align:left; color: black;">
+                <div class="col-md-12">
+                    <h3>Caracteristicas</h3><br/>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Titulo</td>
+                                <td><c:out value="${detalhePerfume.getTitulo()}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Ano</td>
+                                <td><c:out value="${detalhePerfume.getData()}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Peso</td>
+                                <td><c:out value="${detalhePerfume.getPeso()}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Categoria</td>
+                                <td><c:out value="${detalhePerfume.getCategoria()}"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+            <hr>
+            <div class="row justify-content-start" style="text-align:left; color: black;">
+                <div class="col-md-12">
+                    <h3>FAQ</h3>
+                    <c:forEach var="prod" items="${detalhePerfume.getPerguntas()}">
+                        <tr>
+                        <h4><c:out value="${prod.getPergunta()}"/></h4>
+                        <p><c:out value="${prod.getResposta()}"/></p>
+                        </tr>
+                    </c:forEach>
+                </div>
+            </div>
+        </div>
+        <!-- FIM DETALES -->
+
+        <!--FOOTER -->
+        <div class="footer-bar"></div>
+        <footer>
+
+            <hr>
+
+            <div id="copyrightBox">
+                <p id="copyright">
+                    As ofertas são válidas por tempo determinado e/ou enquanto durarem os estoques. Nosso serviço de entregas não permite encomendas feitas com endereçamento de Caixa Postal.</p>
+                <p id="copyright"> 
+                    Os preços apresentados no site não são obrigatoriamente iguais aos apresentados na rede de lojas físicas da Muchachos Perfumaria, e somente são válidos para as compras efetuadas no ato de sua exibição.
+                </p>
+                <p id="copyright"> 
+                    Muchachos Perfumaria é uma empresa do grupo Muchachos S.A., CNPJ nº 54.345.056/0054-07, Av Faria Lima, nº 15461, São Paulo – SP.
+                </p>
+            </div>
+        </footer>
         <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/swiper.min.js"></script>
         <script src="${pageContext.request.contextPath}/JSP-STYLES/JS/script.js"></script>
     </body>
