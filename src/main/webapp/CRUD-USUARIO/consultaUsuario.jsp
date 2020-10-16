@@ -4,7 +4,6 @@
     Author     : Diego Queiroz
 --%>
 
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -61,7 +60,7 @@
                 <div class="row justify-content-center">
                     <div class="form-group col-12">
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" id="style-1" style="height:500px;">
-                            <table class="table" style="color: white;">
+                            <table class="table" style="color: blue;">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nome</th>

@@ -202,7 +202,7 @@ footer hr{
     opacity: 0;
     animation: fadeIn 1.3s forwards;
     opacity: 0.9;
-    font-family: HomepageBaukasten-Book !important;
+    font-family: Agane !important;
 
 }
 @keyframes fadeIn {
