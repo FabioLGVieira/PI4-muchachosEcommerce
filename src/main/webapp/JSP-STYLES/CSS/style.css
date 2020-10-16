@@ -223,8 +223,8 @@ footer hr{
     max-width: 1000px;
     padding: 15px;
     margin: auto;
-    color: black;
-    background-color: #ffffff;
+    color: white;
+    background-color: rgba(18, 27, 42, 0.8);
     padding: 1%;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgba(132, 132, 132, 0.5); 

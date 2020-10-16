@@ -58,7 +58,7 @@
                 <div class="row justify-content-center">
                     <div class="form-group col-12">
                         <div class="table-wrapper-scroll-y my-custom-scrollbar" id="style-1" style="height:500px;">
-                            <table class="table" style="color: black;">
+                            <table class="table" style="color: white;">
                                 <thead>
                                     <tr>
                                         <th scope="col">Nome</th>

@@ -126,13 +126,6 @@
                                 <a href="${pageContext.request.contextPath}/CRUD-PRODUTOS/consultaProdutos.jsp" class="dropdown-item">Consulta</a>
                             </div>
                         </li>
-                        <li id="clientes" class="nav-item dropdown" style="display:none">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Clientes</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Cadastro</a>
-                                <a href="#" class="dropdown-item">Consulta</a>
-                            </div>
-                        </li>
                         <li id="usuarios" class="nav-item dropdown" style="display:none">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usuarios</a>
                             <div class="dropdown-menu">
@@ -273,7 +266,7 @@
 
                     <div class="form-singin">
                         <div class="" id="" >
-                            <form  action = "${pageContext.request.contextPath}/logoutServlet" method = "post" style="text-align: center;">
+                            <form  action = "${pageContext.request.contextPath}/logoutServlet" method = "post" style="text-align: center;">*
                                 <h1 class="h3 mb-3 font-weight-normal">Opções</h1>
                                 <br>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-singin"> Logout <i class="fas fa-sign-in-alt"></i> </button>
