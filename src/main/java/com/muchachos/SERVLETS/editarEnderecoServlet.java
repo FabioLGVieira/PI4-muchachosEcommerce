@@ -39,7 +39,7 @@ public class editarEnderecoServlet extends HttpServlet {
         request.setAttribute("endereco", E);
         /* RETORNA PRA PÁGINA DE EDITAR ENDERECO */
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/editarEndereco.jsp");
+                = request.getRequestDispatcher("CRUD-ENDERECO/editarEndereco.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -87,7 +87,7 @@ public class editarEnderecoServlet extends HttpServlet {
                 }
 
                 RequestDispatcher dispatcher
-                        = request.getRequestDispatcher("JSP-PAGES/finalizarCompra.jsp");
+                        = request.getRequestDispatcher("finalizarCompra.jsp");
                 dispatcher.forward(request, response);
             } else if (request.getParameter("frontEnd").equals("visualizarEnderecos")) {
                 HttpSession sessao = request.getSession();
@@ -103,13 +103,13 @@ public class editarEnderecoServlet extends HttpServlet {
                 }
 
                 RequestDispatcher dispatcher
-                        = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEnderecoCliente.jsp");
+                        = request.getRequestDispatcher("CRUD-ENDERECO/consultaEnderecoCliente.jsp");
                 dispatcher.forward(request, response);
             } else {
-                request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/consultaUsuario.jsp").forward(request, response);
+                request.getRequestDispatcher("CRUD-USUARIO/consultaUsuario.jsp").forward(request, response);
             }
         } else {
-            request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/consultaUsuario.jsp").forward(request, response);
+            request.getRequestDispatcher("CRUD-USUARIO/consultaUsuario.jsp").forward(request, response);
         }
     }
 

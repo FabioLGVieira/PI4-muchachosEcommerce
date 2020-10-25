@@ -39,15 +39,15 @@ public class consultaEnderecoServlet extends HttpServlet {
         if (page == null) {
             /* RETORNA PRA PÁGINA DE CONSULTAR ENDERECOS */
             RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEndereco.jsp");
+                    = request.getRequestDispatcher("CRUD-ENDERECO/consultaEndereco.jsp");
             dispatcher.forward(request, response);
         } else if (page.equals("redirectToFinalizarCompra")) {
             RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/finalizarCompra.jsp");
+                    = request.getRequestDispatcher("finalizarCompra.jsp");
             dispatcher.forward(request, response);
         } else if (page.equals("frontEnd")) {
             RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEnderecoCliente.jsp");
+                    = request.getRequestDispatcher("CRUD-ENDERECO/consultaEnderecoCliente.jsp");
         }
     }
 
@@ -71,15 +71,15 @@ public class consultaEnderecoServlet extends HttpServlet {
         if (page == null) {
             /* RETORNA PRA PÁGINA DE CONSULTAR ENDERECOS */
             RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEndereco.jsp");
+                    = request.getRequestDispatcher("CRUD-ENDERECO/consultaEndereco.jsp");
             dispatcher.forward(request, response);
         } else if (page.equals("redirectToFinalizarCompra")) {
             RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/finalizarCompra.jsp");
+                    = request.getRequestDispatcher("finalizarCompra.jsp");
             dispatcher.forward(request, response);
         } else if (page.equals("frontEnd")) {
             RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEnderecoCliente.jsp");
+                    = request.getRequestDispatcher("CRUD-ENDERECO/consultaEnderecoCliente.jsp");
             dispatcher.forward(request, response);
         }
     }

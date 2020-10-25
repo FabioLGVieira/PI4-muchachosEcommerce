@@ -266,7 +266,7 @@
 
                     <div class="form-singin">
                         <div class="" id="" >
-                            <form  action = "${pageContext.request.contextPath}/logoutServlet" method = "post" style="text-align: center;">*
+                            <form  action = "${pageContext.request.contextPath}/logoutServlet" method = "post" style="text-align: center;">
                                 <h1 class="h3 mb-3 font-weight-normal">Opções</h1>
                                 <br>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn-singin"> Logout <i class="fas fa-sign-in-alt"></i> </button>

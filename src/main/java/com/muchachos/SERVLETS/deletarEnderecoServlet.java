@@ -56,7 +56,7 @@ public class deletarEnderecoServlet extends HttpServlet {
                 }
 
                 RequestDispatcher dispatcher
-                        = request.getRequestDispatcher("JSP-PAGES/finalizarCompra.jsp");
+                        = request.getRequestDispatcher("finalizarCompra.jsp");
                 dispatcher.forward(request, response);
             } else if (request.getParameter("frontEnd").equals("visualizarEnderecos")) {
                 HttpSession sessao = request.getSession();
@@ -72,17 +72,17 @@ public class deletarEnderecoServlet extends HttpServlet {
                 }
 
                 RequestDispatcher dispatcher
-                        = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEnderecoCliente.jsp");
+                        = request.getRequestDispatcher("CRUD-ENDERECO/consultaEnderecoCliente.jsp");
                 dispatcher.forward(request, response);
                 
             } else {
                 RequestDispatcher dispatcher
-                        = request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/consultaUsuario.jsp");
+                        = request.getRequestDispatcher("CRUD-USUARIO/consultaUsuario.jsp");
                 dispatcher.forward(request, response);
             }
         } else {
             RequestDispatcher dispatcher
-                    = request.getRequestDispatcher("JSP-PAGES/CRUD-USUARIO/consultaUsuario.jsp");
+                    = request.getRequestDispatcher("CRUD-USUARIO/consultaUsuario.jsp");
             dispatcher.forward(request, response);
         }
     }
