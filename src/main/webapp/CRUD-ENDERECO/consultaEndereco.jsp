@@ -1,5 +1,5 @@
 <%-- 
-    Document   : cadastrarEndereco
+    Document   : consultaEndereco
     Created on : 22/09/2020, 14:07:42
     Author     : Fabio 
 --%>
@@ -62,6 +62,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <%-- ESSE FORM É UM FORM QUE QUEBRA PARA RESOLVER UM BUG! --%>
+                                <form></form>
                                 <%-- FIM --%>
                                 <c:forEach items ="${listaEndereco}" var="endereco">
                                     <tr>
@@ -126,6 +128,27 @@
         <!-- FIM DO BODY -->
         <div class="footer-bar"></div>
 
+        <!--FOOTER -->
+        <footer>
+            <div class="footerBox">
+                
+            </div>
+
+
+            <div class="footerBox">
+                
+            </div>
+
+            <div class="footerBox">
+               
+            </div>
+
+            <hr>
+
+            <div id="copyrightBox">
+                
+            </div>
+        </footer>
         <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/swiper.min.js"></script>
         <script src="${pageContext.request.contextPath}/JSP-STYLES/JS/script.js"></script>   
         <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/jquery-3.4.1.min.js"></script>

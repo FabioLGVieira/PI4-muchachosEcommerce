@@ -1,6 +1,6 @@
 <%-- 
-    Document   : cadastrarEndereco
-    Created on : 19/09/2020, 17:32:09
+    Document   : consultaEndereco
+    Created on : 24/10/2020, 17:47:22
     Author     : Fabio 
 --%>
 
@@ -25,9 +25,9 @@
         <!-- INICIO DO BODY -->
 
         <div id="body-changes" class="text-center">
-            
+
             <form id="fadeForm" class="form-type needs-validation" 
-                  method="post" action="${pageContext.request.contextPath}/cadastrarEnderecoServlet" 
+                  method="post" action="${pageContext.request.contextPath}/editarEnderecoServlet" 
                   accept-charset="UTF-8" name="usuarioForm">
 
                 <div class="alert alert-success" role="alert" style="display:none;" id='RespostaSucesso'>
@@ -40,7 +40,7 @@
                 <!-- INICIO CADASTRO DE USUARIO -->
                 <div class="row justify-content-center">
                     <div class="form-group col-6">
-                        <input type="hidden" value="${IDEndereco}" name="ID">
+                        <input type="hidden" value="${endereco.getID()}" name="ID">
                         <h2>Endereço</h2>
                     </div>
                 </div>
@@ -50,16 +50,20 @@
                 <div class="row justify-content-center">
                     <div class="form-group col-4 ">
                         <label> CEP: </label>
-                        <input type="text" class="form-control" placeholder="00000-000" required name="cep" id="cep" maxlength="10" onkeypress="return onlynumber();" onkeyup="mascara('#####-###', this, event)">
+                        <input type="text" class="form-control" placeholder="00000-000" required name="cep" id="cep" 
+                               maxlength="10" onkeypress="return onlynumber();" onkeyup="mascara('#####-###', this, event)"
+                               value="${endereco.getCEP()}">
                     </div>
                     <div class="form-group col-4 ">
                         <label> Cidade: </label>
-                        <input type="text" class="form-control" placeholder="Chicago" required name="cidade" id="cidade" maxlength="255">
+                        <input type="text" class="form-control" placeholder="Chicago" required name="cidade" 
+                               id="cidade" maxlength="255" value="${endereco.getCidade()}">
                     </div>
                     <div class="form-group col-4">
                         <label> Estado: </label>
                         <select class="form-control" name="estado" id="estado" required >
                             <option selected>Escolha...</option>
+                            <option selected  value="${endereco.getEstado()}">${endereco.getEstado()}</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
@@ -93,11 +97,13 @@
                 <div class="row justify-content-center">
                     <div class="form-group col-8 ">
                         <label> Endereço: </label>
-                        <input type="text" class="form-control" placeholder="1234 Main St" name="endereco" id="endereco" required maxlength="255">
+                        <input type="text" class="form-control" placeholder="1234 Main St" name="endereco" 
+                               id="endereco" required maxlength="255" value="${endereco.getEndereco()}">
                     </div>
                     <div class="form-group col-4">
                         <label> Complemento: </label>
-                        <input type="text" class="form-control" placeholder="Apartament" name="complemento" id="complemento" required maxlength="20">
+                        <input type="text" class="form-control" placeholder="Apartament" name="complemento" 
+                               id="complemento" required maxlength="20" value="${endereco.getComplemento()}">
                     </div>
                 </div>
 
@@ -121,12 +127,12 @@
         <!--FOOTER -->
         <footer>
             <div class="footerBox">
-               
+                
             </div>
 
 
             <div class="footerBox">
-               
+                
             </div>
 
             <div class="footerBox">
@@ -136,7 +142,7 @@
             <hr>
 
             <div id="copyrightBox">
-               
+                
             </div>
         </footer>
         <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/swiper.min.js"></script>
