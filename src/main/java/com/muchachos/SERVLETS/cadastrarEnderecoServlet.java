@@ -30,7 +30,7 @@ public class cadastrarEnderecoServlet extends HttpServlet {
         request.setAttribute("IDEndereco", ID);
 
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("CRUD-ENDERECO/cadastrarEndereco.jsp");
+                = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/cadastrarEndereco.jsp");
         dispatcher.forward(request, response);
     
 }
@@ -62,11 +62,39 @@ public class cadastrarEnderecoServlet extends HttpServlet {
             System.out.println(e);
         }
         if (request.getParameter("frontEnd") != null) {
-            
+            if (request.getParameter("frontEnd").equals("frontEnd")) {
+
+                try {
+                    /* Pega os Dados no Banco */
+                    List<Endereco> listaEndereco = EnderecoDAO.listByID(IDUSUARIO);
+                    request.setAttribute("listaEndereco", listaEndereco);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    e.getLocalizedMessage();
+                    System.out.println("erro DAO endereco: " + e);
+                }
 
                 RequestDispatcher dispatcher
-                        = request.getRequestDispatcher("CRUD-ENDERECO/consultaEnderecoCliente.jsp");
+                        = request.getRequestDispatcher("JSP-PAGES/finalizarCompra.jsp");
                 dispatcher.forward(request, response);
+            } else if (request.getParameter("frontEnd").equals("visualizarEnderecos")) {
+            try {
+                    /* Pega os Dados no Banco */
+                    List<Endereco> listaEndereco = EnderecoDAO.listByID(IDUSUARIO);
+                    request.setAttribute("listaEndereco", listaEndereco);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    e.getLocalizedMessage();
+                    System.out.println("erro DAO endereco: " + e);
+                }
+
+                RequestDispatcher dispatcher
+                        = request.getRequestDispatcher("JSP-PAGES/CRUD-ENDERECO/consultaEnderecoCliente.jsp");
+                dispatcher.forward(request, response);
+            }else {
+                request.getRequestDispatcher("homeServlet").forward(request, response);
+
+            }
         } else {
             request.getRequestDispatcher("homeServlet").forward(request, response);
         }
