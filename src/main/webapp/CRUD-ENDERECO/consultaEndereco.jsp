@@ -152,8 +152,6 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/swiper.min.js"></script>
         <script src="${pageContext.request.contextPath}/JSP-STYLES/JS/script.js"></script>   
         <script type="text/javascript" src="${pageContext.request.contextPath}/JSP-STYLES/JS/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript">
-
-        </script>
+        <script type="text/javascript"></script>
     </body>
 </html>
