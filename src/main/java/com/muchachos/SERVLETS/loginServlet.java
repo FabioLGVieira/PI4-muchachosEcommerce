@@ -1,6 +1,14 @@
+/*
+ * Criado por: Ramses Souza
+ * Data: 13/11/2020
+ * 
+ */
 package com.muchachos.SERVLETS;
 
+import com.muchachos.DAO.CarrinhoDAO;
 import com.muchachos.DAO.LoginDAO;
+import com.muchachos.MODELS.Carrinho;
+import com.muchachos.MODELS.Perfume;
 import com.muchachos.MODELS.Senha;
 import com.muchachos.MODELS.Usuario;
 import java.io.IOException;
@@ -57,7 +65,42 @@ public class loginServlet extends HttpServlet {
             request.setAttribute("tipo", user.getTipo());
 
             /* -------------DISPLAY DE ITENS DO CARRINHO-------------------- */
-           
+            List<Perfume> listaPerfumeCarrinho = null;
+            try {
+                if (sessao.getAttribute("listaCarrinho") != null) {
+
+                    List<Perfume> listaPerfumeCarrinhoSessao = (ArrayList) sessao.getAttribute("listaCarrinho");
+                    for (Perfume L : listaPerfumeCarrinhoSessao) {
+                        Carrinho carrinho = new Carrinho(user.getID(), L.getID(), L.getQuantidade(), "A");
+                        Carrinho itemNoCarrinho = CarrinhoDAO.getByID(user.getID(), L.getID());
+                        if (itemNoCarrinho == null) {
+                            if (CarrinhoDAO.inserir(carrinho)) {
+                                request.setAttribute("msgResposta", "Adicionado com sucesso!");
+                            } else {
+                                request.setAttribute("msgResposta", "Não Foi possível adicionar!");
+                            }
+                        } else {
+                            itemNoCarrinho.setQuantidade(itemNoCarrinho.getQuantidade() + L.getQuantidade());
+                            if (CarrinhoDAO.atualizarQuantidade(itemNoCarrinho)) {
+                                request.setAttribute("msgResposta", "Adicionado com sucesso!");
+                            } else {
+                                request.setAttribute("msgResposta", "Não Foi possível adicionar!");
+                            }
+                        }
+                    }
+                }
+                listaPerfumeCarrinho = CarrinhoDAO.listarProdutos(user.getID());
+
+            } catch (Exception ex) {
+                Logger.getLogger(consultaCarrinhoServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            int quantidadeDeItens = 0;
+            if (listaPerfumeCarrinho != null) {
+                for (Perfume L : listaPerfumeCarrinho) {
+                    quantidadeDeItens = quantidadeDeItens + L.getQuantidade();
+                }
+            }
+            sessao.setAttribute("quantidadeDeItens", quantidadeDeItens);
           
 
             /* -------------FIM DISPLAY DE ITENS DO CARRINHO-------------------- */

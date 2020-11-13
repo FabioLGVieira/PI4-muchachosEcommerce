@@ -73,7 +73,7 @@
                                 <a href="#" class="price"><span id="ValorUnitario" onload=""><c:out value="${produto.formatarValor(produto.getValorVenda())}"/></span></a>
                             </p>
                             <div class="cart">
-                                <form method="post" action="${pageContext.request.contextPath}">
+                                <form method="post" action="${pageContext.request.contextPath}/adicionarNoCarrinhoServlet">
                                     <input type="number" name="quantidade" value="1" style="display:none;">
                                     <input type="hidden" value="${produto.getID()}" name="ID">
                                     <input class="addtocart" type="submit" value="COMPRAR" style="background-color:transparent; border:none;">
@@ -113,7 +113,7 @@
                                 <a href="#" class="price"><span id="ValorUnitario" onload=""><c:out value="${produto1.formatarValor(produto1.getValorVenda())}"/></span></a>
                             </p>
                             <div class="cart">
-                                <form method="post" action="${pageContext.request.contextPath}">
+                                <form method="post" action="${pageContext.request.contextPath}/adicionarNoCarrinhoServlet">
                                     <input type="number" name="quantidade" value="1" style="display:none;">
                                     <input type="hidden" value="${produto1.getID()}" name="ID">
                                     <input class="addtocart" type="submit" value="COMPRAR" style="background-color:transparent; border:none;">
@@ -153,7 +153,7 @@
                                 <a href="#" class="price"><span id="ValorUnitario" onload=""><c:out value="${produto2.formatarValor(produto2.getValorVenda())}"/></span></a>
                             </p>
                             <div class="cart">
-                                <form method="post" action="${pageContext.request.contextPath}">
+                                <form method="post" action="${pageContext.request.contextPath}/adicionarNoCarrinhoServlet">
                                     <input type="number" name="quantidade" value="1" style="display:none;">
                                     <input type="hidden" value="${produto2.getID()}" name="ID">
                                     <input class="addtocart" type="submit" value="COMPRAR" style="background-color:transparent; border:none;">

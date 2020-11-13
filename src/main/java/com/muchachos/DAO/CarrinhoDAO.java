@@ -451,8 +451,8 @@ public class CarrinhoDAO {
                 int Quantidade = Integer.parseInt(result.getString("QUANTIDADE"));
                 String Data = result.getString("DATACADASTRO");
                 float Peso = result.getFloat("PESO");
-                String Tag = result.getString("TAG");
-                Perfume P = new Perfume(ID, Status, Titulo, Descricao, ValorVenda, ValorCusto, Categoria, Quantidade, Data, Imagem, Imagem1, Imagem2, Peso, Tag);
+                //String Tag = null;//result.getString("TAG");
+                Perfume P = new Perfume(ID, Status, Titulo, Descricao, ValorVenda, ValorCusto, Categoria, Quantidade, Data, Imagem, Imagem1, Imagem2, Peso);
                 //Adiciona a instância na lista
                 listaProduto.add(P);
             }

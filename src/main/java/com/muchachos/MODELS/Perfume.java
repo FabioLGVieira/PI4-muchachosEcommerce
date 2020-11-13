@@ -72,6 +72,22 @@ public class Perfume implements Serializable {
         this.tag = tag;
     }
 
+    public Perfume(Integer ID, String status, String titulo, String descricao, float valorVenda, float valorCusto, String categoria, Integer quantidade, String data, String imagem, String imagem1, String imagem2, float peso) {
+        this.ID = ID;
+        this.status = status;
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.valorVenda = valorVenda;
+        this.valorCusto = valorCusto;
+        this.categoria = categoria;
+        this.quantidade = quantidade;
+        this.data = data;
+        this.imagem = imagem;
+        this.imagem1 = imagem1;
+        this.imagem2 = imagem2;
+        this.peso = peso;
+    }
+
     public Perfume(Integer ID, String status, String titulo, String descricao, float valorVenda, float valorCusto, String categoria, Integer quantidade, String data, String imagem, String imagem1, String imagem2, float peso, String tag, List<Perguntas> perguntas) {
         this.ID = ID;
         this.status = status;

@@ -69,7 +69,7 @@
                                                     <c:out value="${produto.getTitulo()}"/>
                                                 </p>
                                                 <p>
-                                                    <c:out value="${produto.getAutor()}"/>
+                                                    <c:out value="${produto.getDescricao()}"/>
                                                 </p>
                                             </td>
                                             <td><c:out value="${produto.formatarValor(produto.getValorVenda())}"/></td>
