@@ -397,7 +397,7 @@
 
                             if (!("erro" in dados)) {
                                 //Atualiza os campos com os valores da consulta.
-                                $("#endereco").val(dados.logradouro);
+                                $("#endereco").val(dados.logradouro + ", ").focus();
                                 $("#bairro").val(dados.bairro);
                                 $("#cidade").val(dados.localidade);
                                 $("#estado").val(dados.uf);
